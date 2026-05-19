@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<math.h>
+int isPrime(int x) ;
+int main()
+{
+	int x;
+	scanf("%d",&x);
+	isPrime(x);
+	return 0;
+}
+int isPrime(int x) 
+{
+	int ret=1;
+	int i;
+	if (x==1||
+	(x%2==0&&x!=2) ) {
+		ret=0;
+	} 
+	for (i=3;i<sqrt(x);i+=2) {
+		if (x%i==0) {
+			ret=0;
+			break;
+		}
+	}
+	if (ret==1) {
+		printf("是素数\n");
+	} else printf("不是素数\n");
+	return ret;
+}
