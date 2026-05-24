@@ -14,14 +14,13 @@ int main()
 		     	if(j!=k && i!=k && i!=j) {
 				  cnt++; 
 				  printf("%d%d%d",i,j,k);
-				    if (cnt==6){
-				 	printf("\n");
-				 	cnt =0;
+				    if (cnt%6==0) {
+				 	     printf("\n");
 				    } else {
 					  printf(" ");
 					  }
+				}
 		     	    k++;
-			    }
 			 }
 			 j++;
 		}
